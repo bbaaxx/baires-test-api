@@ -6,23 +6,23 @@ Baires TEST api
     $ npm install
     $ npm start
 
-### GET /users
+### GET /user
 Returns an arry of users
 
-### GET /users/:id
+### GET /user/:id
 Returns a user if found
 
-### POST /users
+### POST /user
 Request should be application/json and body contains should have an id property:
 
     { "id": "123ABC" }
     
 
-### PUT /users/:id
+### PUT /user/:id
 Request should be application/json and body contains should have an id property:
 
     { "id": "123ABC" }
     
-### DELETE /users/:id
+### DELETE /user/:id
 
 \ ゜o゜)ノ
