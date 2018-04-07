@@ -7,11 +7,11 @@ const users = [];
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.get("/users", (_, res) => {
+app.get("/user", (_, res) => {
   return res.send(users);
 });
 
-app.get("/users/:id", (req, res) => {
+app.get("/user/:id", (req, res) => {
   const { id } = req.params;
   const foundUser = users.find(i => i.id === id);
   if (typeof foundUser === "undefined") {
@@ -20,7 +20,7 @@ app.get("/users/:id", (req, res) => {
   return res.send(foundUser);
 });
 
-app.post("/users", (req, res) => {
+app.post("/user", (req, res) => {
   const { id } = req.body;
   if (typeof users.find(i => i.id === id) === "undefined") {
     users.push(req.body);
@@ -29,7 +29,7 @@ app.post("/users", (req, res) => {
   return res.status(400).json({ error: "user exists" });
 });
 
-app.put("/users/:id", (req, res) => {
+app.put("/user/:id", (req, res) => {
   const { id } = req.params;
   const foundIdx = users.findIndex(i => i.id === id);
   if (foundIdx !== -1) {
@@ -40,7 +40,7 @@ app.put("/users/:id", (req, res) => {
   return res.sendStatus(200);
 });
 
-app.delete("/users/:id", (req, res) => {
+app.delete("/user/:id", (req, res) => {
   const { id } = req.params;
   const foundIdx = users.findIndex(i => i.id === id);
 
