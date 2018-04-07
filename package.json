@@ -1,0 +1,20 @@
+{
+  "name": "baires-test-api",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "body-parser": "1.18.2"
+  },
+  "engines": {
+    "node": "9.x"
+  },
+  "repository": {
+    "url": ""
+  },
+  "license": "MIT"
+}
